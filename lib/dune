@@ -1,0 +1,6 @@
+(include_subdirs unqualified)
+
+(library
+ (name connect4)
+ (libraries ANSITerminal unix)
+ (modules_without_implementation types))

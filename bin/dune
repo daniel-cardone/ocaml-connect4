@@ -1,0 +1,4 @@
+(executable
+ (public_name connect4)
+ (name main)
+ (libraries connect4))
