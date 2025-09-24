@@ -23,7 +23,7 @@ A terminal-based Connect 4 game written in OCaml with AI opponent support.
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/daniel-cardone/ocaml-connect4
    cd connect4
    ```
 
