@@ -10,6 +10,7 @@ let get_choice ?(cursor_style=[red]) spacer options option_lengths =
   let len = List.length options in
   let rec aux curr =
     restore_cursor ();
+    print_string [Reset] "\r";
     erase Eol;
     print_string cursor_style (spacer curr ^ String.make option_lengths.(curr) '^');
     let (curr', stop) =

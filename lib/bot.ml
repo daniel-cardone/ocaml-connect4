@@ -146,12 +146,12 @@ let select_move_with_randomness difficulty move_scores =
   | [(move, _)] -> move
   | (best_move, best_score) :: (second_move, second_score) :: _ ->
     let use_second_best = match difficulty with
-      | Easy -> Random.int 5 = 0
+      | Easy -> Random.int 4 = 0
       | Normal -> Random.int 8 = 0
       | Hard -> Random.int 12 = 0
       | Impossible -> false
     in
-    if use_second_best && abs (best_score - second_score) < 50 then second_move
+    if use_second_best && (difficulty = Easy || abs (best_score - second_score) < 50) then second_move
     else best_move
 
 let get_bot_move board player_color difficulty =
